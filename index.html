@@ -31,10 +31,9 @@ const table  =document.querySelector("p")
    const request = indexedDB.open('MyDatabse', 1);
    
 request.onupgradeneeded = event => 
-         {
-         alert("bazaq");
+        {
 const db = event.target.result; 
-let vbv = db.createObjectStore('dat', { autoIncrement: true });
+db.createObjectStore('dat', { autoIncrement: true });
   alert("создана новая база");
           }
 request.onsuccess = event => 
