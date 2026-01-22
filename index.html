@@ -43,8 +43,12 @@ request.onsuccess = event =>
 const store = transaction.objectStore('dat');
 
 const getAllRequest = store.getAll();
-              alert("getall");    
-  getAllRequest.onsuccess = () =>
+              alert("getall");   
+getAllRequest.onerror = () =>
+               {
+                   alert(`ошибка чтения`)
+               }
+getAllRequest.onsuccess = () =>
                {
       const allRecords = getAllRequest.result ;
 table.style.background = "PaleGreen";
