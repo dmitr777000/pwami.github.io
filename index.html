@@ -42,8 +42,7 @@ request.onsuccess = event =>
  const transaction = db.transaction('dat', 'readwrite');
 const store = transaction.objectStore('dat');
 
-const getAllRequest = store.getAll();
-              alert("getall");   
+const getAllRequest = store.getAll();  
 getAllRequest.onerror = () =>
                {
                    alert(`ошибка чтения`)
