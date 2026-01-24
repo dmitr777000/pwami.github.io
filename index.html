@@ -11,7 +11,7 @@
     </div>
     <h1 >датаa </h1>
     <button id="zarg" >зарегить</button>
-    <div></div>
+    <div id="tablel"></div>
     <button id="da" style="display:none" >вторай</button>
     <p></p>
     </body>
@@ -23,7 +23,7 @@ const h1 =document.querySelector("h1");
 const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
 const today = new Date();
 const rut = today.toLocaleDateString('ru-RU', options);
-const divv  =document.querySelector("button:nth-of-type(2)");
+const tabl2  =document.getElementById("tablel");
 const button =document.getElementById('zarg')
 const button2=document.getElementById("da");
 const table  =document.querySelector("p")
@@ -77,7 +77,7 @@ button2.style.display ="";
             
 button2.addEventListener('click',()=>     
     {
-divv.style.height = "";
+tabl2.style.height = "";
 button2.remove();
 h1.textContent=" ошибка аааа";
 
@@ -95,14 +95,14 @@ request.onsuccess = event =>
        {
       const allRecords = getAllRequest.result;
 h1.textContent =`УсПех !!`;
-document.querySelector("div").style.background = "PaleGreen";
+tabl2.style.background = "PaleGreen";
 let list = '<ul>';
         for (let i = 0; i < allRecords.length; i++) {
             const vvalue =allRecords[i] ;
             list += `<li><strong>${vvalue}</strong></li>`;
                         }
         list += '</ul>';
-        document.querySelector("div").innerHTML = list+"конец";
+        tabl2.innerHTML = list+"конец";
         }
        
         
