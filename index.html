@@ -42,7 +42,9 @@ if ('serviceWorker' in navigator) {
             h1.textContent = rut;
 
  const request = indexedDB.open('MyDatabse', 1);
-   
+
+request.onerror = event => alert("feil data bank")
+         
 request.onupgradeneeded = event => 
         {
 const db = event.target.result; 
