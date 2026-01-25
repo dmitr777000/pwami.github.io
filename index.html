@@ -29,13 +29,13 @@ const button2=document.getElementById("da");
 const table  =document.querySelector("p")
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')  // Путь к файлу SW
+    navigator.serviceWorker.register('/pwami/sw.js')  // Путь к файлу SW
       .then(registration => {
         console.log('Service Worker зарегистрирован успешно:', registration.scope);
       })
       .catch(error => {
        h1.innerHTML=JSON.stringify(error, null, 2); 
-          table.innerHTML=error;
+     table.innerHTML=error;
       });
   });
 }
