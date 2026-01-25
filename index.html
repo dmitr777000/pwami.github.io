@@ -34,7 +34,7 @@ if ('serviceWorker' in navigator) {
         console.log('Service Worker зарегистрирован успешно:', registration.scope);
       })
       .catch(error => {
-       console.dir(error) ;
+       h1.innerHTML=console.dir(error) ;
       });
   });
 }
