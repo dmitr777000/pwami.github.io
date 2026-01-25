@@ -35,6 +35,7 @@ if ('serviceWorker' in navigator) {
       })
       .catch(error => {
        h1.innerHTML=JSON.stringify(error, null, 2); 
+          table.innerHTML=error;
       });
   });
 }
