@@ -12,6 +12,6 @@ self.clients.matchAll().then(clients => {
 }
 
 self.addEventListener('activate', myfff)
-setIntetval (myfff, 5000)
+setInterval (myfff, 5000)
   // Сразу активируем новый SW (опциональны ===
 
