@@ -11,6 +11,6 @@ self.clients.matchAll().then(clients => {
 });
 }
 
-self.addEventListener('install', myfff)
+self.addEventListener('activate', myfff)
   // Сразу активируем новый SW (опциональны ===
 
