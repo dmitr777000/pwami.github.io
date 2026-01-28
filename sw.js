@@ -1,7 +1,6 @@
 //let x =1;
 //for(let i=0;i<999999999999999;i++){x*=654676;}
-function myfff (){
-  setTimeout(// Внутри Service Worker
+function myfff (){// Внутри Service Worker
 self.clients.matchAll().then(clients => {
   clients.forEach(client => {
     client.postMessage({
@@ -9,7 +8,7 @@ self.clients.matchAll().then(clients => {
       payload: 'Ваше сообщение'
     });
   });
-}); ,4000);
+});
 }
 
 self.addEventListener('install', myfff)
