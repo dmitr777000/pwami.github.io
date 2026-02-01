@@ -9,6 +9,7 @@ self.addEventListener('install', event => {
     caches.open("v1c")
       .then(cache => {
         return cache.addAll(urlsToCache);
+        myfff(cache, "кеш");
       })
      .catch(error =>  myfff(error, "install"))
   );
