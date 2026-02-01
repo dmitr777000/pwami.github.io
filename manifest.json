@@ -1,10 +1,10 @@
 {
-    "name": "школа5",
-    "short_name": "зарег",
+    "name": "skol5",
+    "short_name": "zareg",
     "theme_color": "#1976d2",
     "background_color": "#fafafa",
     "display": "standalone",
-	"start_url": "/pwami/index.html",
+	"start_url": ".",
     "icons": [
         {
         "src": "./icon192.png",
