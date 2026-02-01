@@ -4,20 +4,17 @@
     "theme_color": "#1976d2",
     "background_color": "#fafafa",
     "display": "standalone",
-    "scope": "./",
     "start_url": "https://dmitr777000.github.io/pwami/",
     "icons": [
         {
         "src": "./icon-192x192.png",
         "sizes": "192x192",
-        "type": "image/png",
-        "purpose": "any"
+        "type": "image/png"
 		},
         {
         "src": "./icon-512x512.png",
         "sizes": "512x512",
-        "type": "image/png",
-        "purpose": "any"
+        "type": "image/png"
         }
     ]
 }          
