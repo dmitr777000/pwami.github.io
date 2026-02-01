@@ -4,7 +4,7 @@
     "theme_color": "#1976d2",
     "background_color": "#fafafa",
     "display": "standalone",
-	"url"		: "
+	"start_url"	: "https://dmitr777000.github.io/pwami/",
     "icons": [
         {
         "src": "./icon192.png",
