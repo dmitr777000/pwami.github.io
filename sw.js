@@ -16,7 +16,7 @@ self.addEventListener('install', event => {
 //for(let i=0;i<999999999999999;i++){x*=654676;}
 function myfff (mess){// Внутри Service Worker
 self.clients.matchAll().then(clients => {
-  clients.forEach(client => client.postMessage("Ваше е ="+ness));
+  clients.forEach(client => client.postMessage("Ваше е ="+mess));
 });
 }
 
