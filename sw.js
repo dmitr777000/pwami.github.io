@@ -10,7 +10,7 @@ self.addEventListener('install', event => {
       .then(cache => {
         return cache.addAll(urlsToCache);
       })
-     .catch(error =>  myfff(error))
+     .catch(error =>  myfff(error, "install"))
   );
 });
 
@@ -27,13 +27,13 @@ self.addEventListener('fetch', event => {
 });
 
 //for(let i=0;i<999999999999999;i++){x*=654676;}
-function myfff (mess){// Внутри Service Worker
+function myfff (mess, lexical){// Внутри Service Worker
 self.clients.matchAll().then(clients => {
-  clients.forEach(client => client.postMessage("Ваше е ="+mess));
+  clients.forEach(client => client.postMessage("Ваше е ="+mess+lexical));
 });
 }
 
-self.addEventListener('activate', myfff)
-setInterval (myfff, 3000)
+//self.addEventListener('activate', myfff)
+//setInterval (myfff, 3000)
   // Сразу активируем новый SW (опциональны ===
 
