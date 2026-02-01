@@ -10,12 +10,13 @@ self.addEventListener('install', event => {
       .then(cache => {
         return cache.addAll(urlsToCache);
       })
+     .catch(error =>  myfff(error))
   );
 });
 //for(let i=0;i<999999999999999;i++){x*=654676;}
 function myfff (mess){// Внутри Service Worker
 self.clients.matchAll().then(clients => {
-  clients.forEach(client => client.postMessage(`Ваше ${mess}е`));
+  clients.forEach(client => client.postMessage("Ваше е ="+ness));
 });
 }
 
