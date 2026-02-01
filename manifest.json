@@ -1,10 +1,10 @@
 {
-    "name": "школа3",
+    "name": "школа4",
     "short_name": "зарег",
     "theme_color": "#1976d2",
     "background_color": "#fafafa",
     "display": "standalone",
-	"start_url": "https://dmitr777000.github.io/pwami/",
+	"start_url": "https://dmitr777000.github.io/pwami/index.html",
     "icons": [
         {
         "src": "./icon192.png",
