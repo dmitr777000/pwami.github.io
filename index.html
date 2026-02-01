@@ -45,7 +45,12 @@ Notification.requestPermission().then(function(permission) {
   }
 });
             
-      navigator.serviceWorker.addEventListener('message', event => console.log(`из ада -  ${event.data}  `));
+      navigator.serviceWorker.addEventListener('message', event => 
+          {
+              const p = document.createElement('p');
+    p.textContent = "ошшибк" +event.data;
+    document.body.appendChild(p)
+          });
     // Можно показать уведомление или кнопку обновления     
             h1.textContent = rut;
 
