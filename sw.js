@@ -2,5 +2,14 @@ function myfff (mess, lexical){self.clients.matchAll().then(clients => {  client
 
 self.addEventListener('fetch', event => {
   event.respondWith(fetch(event.request) 
+  .then (networkResponse => 
+          {
+        // Если всё ок — клонируем и кладём в кэш
+        if (networkResponse && networkResponse.status === 200) {
+          const responseClone = networkResponse.clone();  // ← обязательно clone()!
+          
+          caches.open('my-cache-v1').then(cache =>cache.put(event.request, responseClone);      // ← вот он, put
+           })
+            return networkResponse;
 
     }  )
