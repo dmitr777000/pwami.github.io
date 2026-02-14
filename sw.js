@@ -9,15 +9,10 @@ self.addEventListener('fetch', event => {
           const responseClone = networkResponse.clone();  // ← обязательно clone()!
           
           caches.open('my-cache-v1')
-          .then(cache =>
-            {
-            cache.put(event.request, responseClone);
+            .then(cache => cache.put(event.request, responseClone))
   
             }  
-                }
          return networkResponse;  
           })// ← вот он, put
-           })
-            
-
+          
     }  )
