@@ -8,9 +8,9 @@ self.addEventListener('fetch', event => {
         if (networkResponse && networkResponse.status === 200) {
           const responseClone = networkResponse.clone();  // ← обязательно clone()!
           
-          caches.open('my-cache-v1') .then(cache => cache.put(event.request, responseClone));
-  return networkResponse;
-                                        }
+          caches.open('my-cache-v1').then(cache => cache.put(event.request, responseClone));
+            return networkResponse;
+                                            }
           })// ← вот он, put
           
     }  )
